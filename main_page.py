@@ -4,6 +4,7 @@ from streamlit_option_menu import option_menu
 from pathlib import Path
 import requests
 from streamlit_lottie import st_lottie
+from PIL import Image
 
 # ---- Page Config ----
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -14,8 +15,8 @@ st.set_page_config(page_title="Himanshu Bhat", page_icon=":globe_with_meridians:
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 home_css_file = current_dir / "styles" / "home_page.css"
 contact_css_file = current_dir / "styles" / "content_page.css"
-profile_pic = current_dir / "images" / "profile_pic.png"
-
+profile_image = current_dir / "images" / "profile_pic.png"
+profile_picture = Image.open(profile_image)
 # resume_file = current_dir / "assets" / "CV.pdf"
 
 
@@ -56,7 +57,7 @@ def home_page():
     col1, col2, col3, col4 = st.columns([1, 2, 3, 6], gap='large')
 
     with col2:  # Profile Photo
-        st.image(profile_pic, width=300)
+        st.image(profile_picture, width=300)
 
     with col4:  # Introduction
         name = "Himanshu Bhat"
