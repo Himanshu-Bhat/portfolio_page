@@ -14,7 +14,7 @@ st.set_page_config(page_title="Himanshu Bhat", page_icon=":globe_with_meridians:
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 home_css_file = current_dir / "styles" / "home_page.css"
 contact_css_file = current_dir / "styles" / "content_page.css"
-profile_pic = current_dir / "images" / "round_photo.png"
+profile_pic = current_dir / "images" / "profile_pic.png"
 
 # resume_file = current_dir / "assets" / "CV.pdf"
 
@@ -57,7 +57,7 @@ def home_page():
 
     with col2:  # Profile Photo
         with open(home_css_file) as f:
-            st.image(r'.\images\profile_pic.png', width=300)
+            st.image(profile_pic, width=300)
 
     with col4:  # Introduction
         name = "Himanshu Bhat"
