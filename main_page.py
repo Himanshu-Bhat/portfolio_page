@@ -56,8 +56,7 @@ def home_page():
     col1, col2, col3, col4 = st.columns([1, 2, 3, 6], gap='large')
 
     with col2:  # Profile Photo
-        with open(home_css_file) as f:
-            st.image(profile_pic, width=300)
+        st.image(profile_pic, width=300)
 
     with col4:  # Introduction
         name = "Himanshu Bhat"
