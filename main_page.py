@@ -38,8 +38,8 @@ selected = option_menu(
     orientation="horizontal",
     styles={
         "container": {"padding": "0!important", "background-color": "#080808"},
-        "icon": {"color": "white", "font-size": "23px"},
-        "nav-link": {"font-size": "20px",
+        "icon": {"color": "white", "font-size": "22px"},
+        "nav-link": {"font-size": "18px",
                      "text-align": "center",
                      "margin": "0px",
                      "--hover-color": "#080808"},
