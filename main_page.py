@@ -54,21 +54,23 @@ def home_page():
         st.write('\n')
     ###################################### BLOCK-1 #######################################################
     # ---- FRONT PAGE ----
-    col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='Large')
+    col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='medium')
 
     with col2:  # Profile Photo
         st.image(profile_picture, width=300)
 
     with col3:  # Introduction
         name = "Himanshu Bhat"
-        text_style = f"<h1 style='font-family:Georgia, serif; color:White; font-size:50px;'>{name}</h1>"
+        text_style = f"<h1 style='font-family:Georgia, serif; color:#f8f8ff; font-size:55px;'>{name}</h1>"
         st.markdown(text_style, unsafe_allow_html=True)
 
         intro_content = """Software Engineer at DXC Technology"""
-        text_style = f"<p1 style='font-family:serif; color:grey; font-size:22px;'>{intro_content}</p1>"
+        text_style = f"<p1 style='font-family:serif; color:grey; font-size:26px;'>{intro_content}</p1>"
         st.markdown(text_style, unsafe_allow_html=True)
 
-        st.text('3+ Years of Experience In Assisting Enterprises & Business \nBy Supporting Application Management & Private Cloud Solutions.')
+        text = """3+ Years of Experience In Assisting Enterprises & Business By Supporting <br> Application Management & Private Cloud Solutions."""
+        text_style = f"<p1 style='font-family:san-system-ui; color:#f9ffe3; font-size:16px;'>{text}</p1>"
+        st.markdown(text_style, unsafe_allow_html=True)
 
     ###################################### BLOCK-2 #######################################################
     # --- EXPERIENCE & QUALIFICATIONS ---
@@ -107,7 +109,7 @@ def home_page():
     for i in range(3):
         st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([1, 3, 5, 1], gap='medium')
+    col1, col2, col3, col4 = st.columns([1, 3.5, 4.5, 1], gap='small')
 
     with col2:
         lottie_url = load_lottieurl("https://assets8.lottiefiles.com/private_files/lf30_8z6ubjgk.json")
@@ -117,8 +119,8 @@ def home_page():
             reverse=False,
             loop=True,
             quality="low",  # medium ; high
-            height=350,
-            width=350,
+            height=400,
+            width=400,
             key=None,
         )
 
