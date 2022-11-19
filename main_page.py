@@ -77,7 +77,7 @@ def home_page():
     for i in range(2):
         st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([1, 5, 3, 1], gap='medium')
+    col1, col2, col3, col4 = st.columns([1, 5, 3, 1], gap='small')
 
     with col2:
         heading = "Experience & Qualifications"
@@ -109,7 +109,7 @@ def home_page():
     for i in range(2):
         st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([1, 3.5, 4.5, 1], gap='medium')
+    col1, col2, col3, col4 = st.columns([1, 3.5, 4.5, 1], gap='small')
 
     with col2:
         lottie_url = load_lottieurl("https://assets8.lottiefiles.com/private_files/lf30_8z6ubjgk.json")
@@ -145,7 +145,7 @@ def home_page():
     # ---- EXPERIENCE ----
     st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([1, 5, 3.5, .5], gap='medium')
+    col1, col2, col3, col4 = st.columns([1, 5, 3.5, .5], gap='small')
 
     with col2:
         heading = "Work Experience"
@@ -198,7 +198,7 @@ def home_page():
 
     ###################################### BLOCK-5 #######################################################
     # ---- CERTIFICATION ---
-    col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='medium')
+    col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='small')
 
     with col2:
         lottie_url = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_tbwqrxnz.json")
