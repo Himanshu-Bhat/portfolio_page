@@ -54,29 +54,28 @@ def home_page():
         st.write('\n')
     ###################################### BLOCK-1 #######################################################
     # ---- FRONT PAGE ----
-    col1, col2, col3, col4 = st.columns([1, 2, 3, 6], gap='large')
+    col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='Large')
 
     with col2:  # Profile Photo
         st.image(profile_picture, width=300)
 
-    with col4:  # Introduction
+    with col3:  # Introduction
         name = "Himanshu Bhat"
-        text_style = f"<h1 style='font-family:serif; color:White; font-size:50px;'>{name}</h1>"
+        text_style = f"<h1 style='font-family:Georgia, serif; color:White; font-size:50px;'>{name}</h1>"
         st.markdown(text_style, unsafe_allow_html=True)
 
         intro_content = """Software Engineer at DXC Technology"""
         text_style = f"<p1 style='font-family:serif; color:grey; font-size:22px;'>{intro_content}</p1>"
         st.markdown(text_style, unsafe_allow_html=True)
 
-        st.text('Assisting Enterprises By Supporting Application \n'
-                'Management & Driving Decision Making')
+        st.text('3+ Years of Experience In Assisting Enterprises & Business \nBy Supporting Application Management & Private Cloud Solutions.')
 
     ###################################### BLOCK-2 #######################################################
     # --- EXPERIENCE & QUALIFICATIONS ---
-    for i in range(5):
+    for i in range(3):
         st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([.5, 7, .3, 5], gap='medium')
+    col1, col2, col3, col4 = st.columns([1, 5, 3, 1], gap='medium')
 
     with col2:
         heading = "Experience & Qualifications"
@@ -90,7 +89,7 @@ def home_page():
                  - ✔️ ️ Excellent team-player and displaying strong sense of initiative on tasks.
                 """)
 
-    with col4:
+    with col3:
         lottie_url = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_qp1q7mct.json")
         st_lottie(
             lottie_url,
@@ -108,7 +107,7 @@ def home_page():
     for i in range(3):
         st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([.5, 3, .5, 6], gap='small')
+    col1, col2, col3, col4 = st.columns([1, 3, 5, 1], gap='medium')
 
     with col2:
         lottie_url = load_lottieurl("https://assets8.lottiefiles.com/private_files/lf30_8z6ubjgk.json")
@@ -118,13 +117,13 @@ def home_page():
             reverse=False,
             loop=True,
             quality="low",  # medium ; high
-            height=400,
-            width=400,
+            height=350,
+            width=350,
             key=None,
         )
 
-    with col4:
-        for i in range(2):
+    with col3:
+        for i in range(1):
             st.write(' ')
 
         heading = "Skills"
@@ -143,10 +142,9 @@ def home_page():
 
     ###################################### BLOCK-4 #######################################################
     # ---- EXPERIENCE ----
-    for i in range(1):
-        st.write('\n')
+    st.write('\n')
 
-    col1, col2, col3 = st.columns([.5, 5.4, 4], gap='small')
+    col1, col2, col3, col4 = st.columns([1, 5, 3.5, .5], gap='medium')
 
     with col2:
         heading = "Work Experience"
@@ -183,24 +181,24 @@ def home_page():
                 """)
 
     with col3:
-        lottie_url = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json")
+        st.write(' ')
+        lottie_url = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_cmaqoazd.json")
         st_lottie(
             lottie_url,
             speed=1,
             reverse=False,
             loop=True,
             quality="low",  # medium ; high
-            height=450,
-            width=450,
+            height=350,
+            width=350,
             key=None,
         )
 
     ###################################### BLOCK-5 #######################################################
     # ---- CERTIFICATION ----
-    for i in range(1):
-        st.write('\n')
+    st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([.5, 3, 3, 6], gap='small')
+    col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='medium')
 
     with col2:
         lottie_url = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_tbwqrxnz.json")
@@ -210,13 +208,13 @@ def home_page():
             reverse=False,
             loop=True,
             quality="low",  # medium ; high
-            height=400,
-            width=400,
+            height=350,
+            width=350,
             key=None,
         )
 
-    with col4:
-        for i in range(2):
+    with col3:
+        for i in range(3):
             st.write(' ')
 
         heading = "Certifications"
@@ -242,7 +240,7 @@ def home_page():
 def contact_page():
     col1, col2 = st.columns([2.2, 4], gap='large')
     with col1:
-        heading = "🤳 You can connect with me on :"
+        heading = "🤳 You Can Connect With Me On :"
         string = f"<h1 style='font-family:sans-serif; color:#00b7eb; font-size:30px;'>{heading}</h1>"
         st.markdown(string, unsafe_allow_html=True)
         st.write('')
