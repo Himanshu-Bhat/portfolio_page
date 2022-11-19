@@ -50,7 +50,7 @@ selected = option_menu(
 
 # ------------------------------------- Home Page Content -----------------------------------------------
 def home_page():
-    for i in range(1):
+    for i in range(3):
         st.write('\n')
     ###################################### BLOCK-1 #######################################################
     # ---- FRONT PAGE ----
@@ -238,6 +238,9 @@ def home_page():
 
 # ------------------------------------- Contact Page Content -----------------------------------------------
 def contact_page():
+    for i in range(3):
+        st.write('\n')
+
     col1, col2 = st.columns([2.2, 4], gap='large')
     with col1:
         heading = "🤳 You Can Connect With Me On :"
