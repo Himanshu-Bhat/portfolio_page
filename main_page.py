@@ -31,16 +31,16 @@ def load_lottieurl(url: str):
 # ---- Horizontal Menu / NavBar with custom style ----
 selected = option_menu(
     menu_title=None,  # required
-    options=["HOME", "PROJECTS", "CONTACT"],  # required
-    icons=["bi-person-circle", "bi-code-slash", "bi bi-chat-left-dots-fill"],  # optional
+    options=["PROJECTS", "HOME", "CONTACT"],  # required
+    icons=["bi-code-slash", "bi-person-circle", "bi bi-chat-left-dots-fill"],  # optional
     menu_icon="cast",  # BootStrap Icon: https://icons.getbootstrap.com/
-    default_index=0,  # optional
+    default_index=1,  # optional
     orientation="horizontal",
     styles={
         "container": {"padding": "0!important", "background-color": "#080808"},
-        "icon": {"color": "white", "font-size": "20px"},
+        "icon": {"color": "white", "font-size": "23px"},
         "nav-link": {"font-size": "20px",
-                     "text-align": "right",
+                     "text-align": "center",
                      "margin": "0px",
                      "--hover-color": "#080808"},
         "nav-link-selected": {"background-color": "080808"},
@@ -74,7 +74,7 @@ def home_page():
 
     ###################################### BLOCK-2 #######################################################
     # --- EXPERIENCE & QUALIFICATIONS ---
-    for i in range(3):
+    for i in range(2):
         st.write('\n')
 
     col1, col2, col3, col4 = st.columns([1, 5, 3, 1], gap='medium')
@@ -119,14 +119,13 @@ def home_page():
             reverse=False,
             loop=True,
             quality="low",  # medium ; high
-            height=400,
-            width=400,
+            height=325,
+            width=325,
             key=None,
         )
 
     with col3:
-        for i in range(1):
-            st.write(' ')
+        st.write(' ')
 
         heading = "Skills"
         string = f"<h1 style='font-family:sans-serif; color:#2ecc71; font-size:25px;'>{heading}</h1>"
@@ -156,7 +155,8 @@ def home_page():
         # --- JOB 1 ---
         st.write("🏢", "**DXC Technology**  | *11/2022 - Present*")
         st.write("""
-                - ► To be filled
+                - ► Responsible for Application Management.
+                - ► Responsible for Automation Support.
                 """)
 
         # --- JOB 2 ---
@@ -296,7 +296,7 @@ def contact_page():
 if selected == "HOME":
     home_page()
 elif selected == "PROJECTS":
-    pass
+    st.write('To Be Added !!!')
 else:
     contact_page()
 
