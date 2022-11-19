@@ -197,9 +197,7 @@ def home_page():
         )
 
     ###################################### BLOCK-5 #######################################################
-    # ---- CERTIFICATION ----
-    st.write('\n')
-
+    # ---- CERTIFICATION ---
     col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='medium')
 
     with col2:
@@ -216,7 +214,7 @@ def home_page():
         )
 
     with col3:
-        for i in range(3):
+        for i in range(2):
             st.write(' ')
 
         heading = "Certifications"
