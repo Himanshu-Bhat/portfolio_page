@@ -106,10 +106,10 @@ def home_page():
 
     ###################################### BLOCK-3 #######################################################
     # ---- SKILLS ----
-    for i in range(3):
+    for i in range(2):
         st.write('\n')
 
-    col1, col2, col3, col4 = st.columns([1, 3.5, 4.5, 1], gap='small')
+    col1, col2, col3, col4 = st.columns([1, 3.5, 4.5, 1], gap='medium')
 
     with col2:
         lottie_url = load_lottieurl("https://assets8.lottiefiles.com/private_files/lf30_8z6ubjgk.json")
