@@ -236,6 +236,43 @@ def home_page():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
+# ------------------------------------- Projects Page Content -----------------------------------------------
+def project_page():
+    for i in range(3):
+        st.write('\n')
+
+    # Project 1 : Covid Tracker
+    project_image = current_dir / "projects_thumbnails" / "covid_19" / "image.png" # Loading Thumbnail Image
+    thumbnail = Image.open(project_image)
+
+    heading = "COVID-19 Tracker"
+    string = f"<h1 style='font-family:sans-serif; color:#ff8243; font-size:20px;'>{heading}</h1>"
+    st.markdown(string, unsafe_allow_html=True)
+
+    col1, col2, col3, col4 = st.columns([1,3,5,1], gap='medium')
+
+    with col2:
+        st.image(thumbnail, width=300)
+
+    with col3:
+        streamlit_link = {"Covid-19 Tracker" : "https://himanshu-bhat-covid-19-tracker-app-6s3ttc.streamlit.app/",
+                          "GitHub Link" : "https://github.com/Himanshu-Bhat/Covid-19_Tracker"}
+
+        for name, link in streamlit_link.items():
+            st.write(f"[😷 **{name}**]({link})")
+
+        with st.expander("See More Info"):
+            st.write("""
+                    Data was Collected from https://covid19.who.int/data \n
+                    Dashboard was created using Python (Streamlit), while Pandas lib was used for Data Processing.
+                    Dashboard has filter option on top left side of page, that lets you filter Data country wise.
+                    """)
+
+
+    # Use Local Project CSS File (Same as Home Page CSS)
+    with open(home_css_file) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 # ------------------------------------- Contact Page Content -----------------------------------------------
 def contact_page():
     for i in range(3):
@@ -297,7 +334,7 @@ def contact_page():
 if selected == "HOME":
     home_page()
 elif selected == "PROJECTS":
-    st.write('To Be Added !!!')
+    project_page()
 else:
     contact_page()
 
