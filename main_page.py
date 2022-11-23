@@ -54,7 +54,7 @@ def home_page():
         st.write('\n')
     ###################################### BLOCK-1 #######################################################
     # ---- FRONT PAGE ----
-    col1, col2, col3, col4 = st.columns([1, 4, 4, 1], gap='medium')
+    col1, col2, col3, col4 = st.columns([1.1, 4, 4, .9], gap='medium')
 
     with col2:  # Profile Photo
         st.image(profile_picture, width=300)
@@ -68,7 +68,7 @@ def home_page():
         text_style = f"<p1 style='font-family:serif; color:grey; font-size:26px;'>{intro_content}</p1>"
         st.markdown(text_style, unsafe_allow_html=True)
 
-        text = """3+ Years of Experience In Assisting Enterprises & Business By Supporting <br> Application Management & Private Cloud Solutions."""
+        text = """Data Science Enthusiast With 3+ Years of Experience In Assisting Enterprises <br>& Business By Supporting Application Management & Private Cloud Solutions."""
         text_style = f"<p1 style='font-family:san-system-ui; color:#f9ffe3; font-size:16px;'>{text}</p1>"
         st.markdown(text_style, unsafe_allow_html=True)
 
@@ -241,30 +241,65 @@ def project_page():
     for i in range(3):
         st.write('\n')
 
-    # Project 1 : Covid Tracker
-    project_image = current_dir / "projects_thumbnails" / "covid_19" / "image.png" # Loading Thumbnail Image
+    # Project 1 : Movie Recommendation System
+    project_image = current_dir / "projects_thumbnails" / "movie_recom_engine" / "image.png" # Loading Thumbnail Image
     thumbnail = Image.open(project_image)
 
-    heading = "COVID-19 Tracker"
-    string = f"<h1 style='font-family:sans-serif; color:#ff8243; font-size:20px;'>{heading}</h1>"
-    st.markdown(string, unsafe_allow_html=True)
-
-    col1, col2, col3, col4 = st.columns([1,3,5,1], gap='medium')
+    col1, col2, col3, col4 = st.columns([1, 3, 3.5, 2], gap='medium')
 
     with col2:
+        # Loading Title of Project
+        heading = "Movie Recommendation System"
+        string = f"<h1 style='font-family:sans-serif; color:#7b68ee; font-size:20px;'>{heading}</h1>"
+        st.markdown(string, unsafe_allow_html=True)
+        # Loading Image of Project
         st.image(thumbnail, width=300)
 
     with col3:
-        streamlit_link = {"Covid-19 Tracker" : "https://himanshu-bhat-covid-19-tracker-app-6s3ttc.streamlit.app/",
-                          "GitHub Link" : "https://github.com/Himanshu-Bhat/Covid-19_Tracker"}
+        st.write(' ')
+        st.write(' ')
+        # Loading Details of Project
+        streamlit_link = {"**🎬 Movie Recommendation System**" : "https://himanshu-bhat-movie-recommendation-system.streamlit.app/",
+                          "**GitHub Link**" : "https://github.com/Himanshu-Bhat/Movie-Recommendation-System"}
 
         for name, link in streamlit_link.items():
-            st.write(f"[😷 **{name}**]({link})")
+            st.write(f"[{name}]({link})")
+
+        with st.expander("See More Info"):
+            st.write("""
+                    Contains information of 10k+ movies. Data was Collected from TMDB API. \n
+                    Recommendation Engine uses TF-IDF for Text Vectorization & cosine similarity for recommending movies. \n
+                    Data Processing using done using Python (Pandas) & UI/UX was created using Python (Streamlib) 
+                    """)
+
+    # Project 2 : Covid Tracker
+    project_image = current_dir / "projects_thumbnails" / "covid_19" / "image.png" # Loading Thumbnail Image
+    thumbnail = Image.open(project_image)
+
+    col1, col2, col3, col4 = st.columns([1, 3, 3.5, 2], gap='medium')
+
+    with col2:
+        # Loading Title of Project
+        heading = "COVID-19 Tracker"
+        string = f"<h1 style='font-family:sans-serif; color:#fcf75e; font-size:20px;'>{heading}</h1>"
+        st.markdown(string, unsafe_allow_html=True)
+        # Loading Image of Project
+        st.image(thumbnail, width=300)
+
+    with col3:
+        st.write(' ')
+        st.write(' ')
+        # Loading Details of Project
+        streamlit_link = {"**😷 Covid-19 Tracker**" : "https://himanshu-bhat-covid-19-tracker-app-6s3ttc.streamlit.app/",
+                          "**GitHub Link**" : "https://github.com/Himanshu-Bhat/Covid-19_Tracker"}
+
+        for name, link in streamlit_link.items():
+            st.write(f"[{name}]({link})")
 
         with st.expander("See More Info"):
             st.write("""
                     Data was Collected from https://covid19.who.int/data \n
-                    Dashboard was created using Python (Streamlit), while Pandas lib was used for Data Processing.
+                    Dashboard was created using Python (Streamlit), while Pandas lib was used for Data Processing. \n
                     Dashboard has filter option on top left side of page, that lets you filter Data country wise.
                     """)
 
@@ -272,6 +307,7 @@ def project_page():
     # Use Local Project CSS File (Same as Home Page CSS)
     with open(home_css_file) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 
 # ------------------------------------- Contact Page Content -----------------------------------------------
 def contact_page():
@@ -335,8 +371,10 @@ if selected == "HOME":
     home_page()
 elif selected == "PROJECTS":
     project_page()
-else:
+elif selected == "CONTACT":
     contact_page()
+else:
+    pass
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
