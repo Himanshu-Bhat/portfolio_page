@@ -259,8 +259,8 @@ def project_page():
         st.write(' ')
         st.write(' ')
         # Loading Details of Project
-        streamlit_link = {"**🎬 Movie Recommendation System**" : "https://himanshu-bhat-movie-recommendation-system.streamlit.app/",
-                          "**GitHub Link**" : "https://github.com/Himanshu-Bhat/Movie-Recommendation-System"}
+        streamlit_link = {"**🎬 Movie Recommendation System**" : "https://movie-recommendation-system-opp.streamlit.app/",
+                          "**GitHub Link**" : "https://github.com/Himanshu-Bhat/movie-recommendation-system"}
 
         for name, link in streamlit_link.items():
             st.write(f"[{name}]({link})")
@@ -290,7 +290,7 @@ def project_page():
         st.write(' ')
         st.write(' ')
         # Loading Details of Project
-        streamlit_link = {"**😷 Covid-19 Tracker**" : "https://himanshu-bhat-covid-19-tracker-app-6s3ttc.streamlit.app/",
+        streamlit_link = {"**😷 Covid-19 Tracker Link**" : "https://covid-19-tracker-opp.streamlit.app/",
                           "**GitHub Link**" : "https://github.com/Himanshu-Bhat/Covid-19_Tracker"}
 
         for name, link in streamlit_link.items():
